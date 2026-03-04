@@ -16,6 +16,7 @@ const emit = defineEmits<{
 const { formatCurrency } = useCurrency()
 
 const categoryLabels: Record<string, string> = {
+  // expense
   food: '🍔 Food',
   transport: '🚗 Transport',
   housing: '🏠 Housing',
@@ -23,6 +24,11 @@ const categoryLabels: Record<string, string> = {
   health: '❤️ Health',
   work: '💼 Work',
   other: '📦 Other',
+  // income
+  salary: '💵 Salary',
+  freelance: '🧑‍💻 Freelance',
+  investment: '📈 Investment',
+  gift: '🎁 Gift',
 }
 </script>
 
