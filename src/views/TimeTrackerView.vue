@@ -114,7 +114,7 @@ const todayHoursFormatted = computed(() => timeStore.todayHours.toFixed(1) + 'h'
 </script>
 
 <template>
-  <div class="time-view">
+  <div class="view">
     <div class="page-header">
       <div>
         <h1>Time Tracker</h1>
@@ -205,16 +205,6 @@ const todayHoursFormatted = computed(() => timeStore.todayHours.toFixed(1) + 'h'
 </template>
 
 <style scoped>
-.time-view {
-  padding: 2rem 2.5rem;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
 .page-header h1 { margin-bottom: 0.25rem; }
 .page-subtitle { color: var(--text-muted); font-size: 0.9375rem; }
 
@@ -284,7 +274,6 @@ const todayHoursFormatted = computed(() => timeStore.todayHours.toFixed(1) + 'h'
 }
 
 @media (max-width: 640px) {
-  .time-view { padding: 1rem 1.25rem; }
   .stopwatch-time { font-size: 3rem; }
   .stopwatch-start { flex-direction: column; }
   .control-buttons { flex-direction: column; align-items: stretch; }

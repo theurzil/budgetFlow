@@ -28,13 +28,6 @@ import BaseToast from '@/components/BaseToast.vue'
   margin-left: var(--nav-width);
   min-height: 100vh;
   overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Every view sits inside this — fills the remaining width, centered */
-.app-main > * {
-  width: 100%;
 }
 
 @media (max-width: 768px) {

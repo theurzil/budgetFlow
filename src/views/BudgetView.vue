@@ -308,16 +308,6 @@ function confirmDelete() {
 </template>
 
 <style scoped>
-.budget-view {
-  padding: 2rem 2.5rem;
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
 .page-header {
   display: flex;
   align-items: flex-start;
@@ -398,7 +388,6 @@ function confirmDelete() {
 }
 
 @media (max-width: 640px) {
-  .budget-view { padding: 1rem 1.25rem; }
   .balance-strip { padding: 1rem; gap: 1rem; }
   .balance-value { font-size: 1.125rem; }
   .filters { grid-template-columns: 1fr; }

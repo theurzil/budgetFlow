@@ -158,7 +158,7 @@ function exportTimeCSV() {
 </script>
 
 <template>
-  <div class="reports-view">
+  <div class="view">
     <div class="page-header">
       <div>
         <h1>Reports</h1>
@@ -243,14 +243,6 @@ function exportTimeCSV() {
 </template>
 
 <style scoped>
-.reports-view {
-  padding: 2rem 2.5rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
 .page-header {
   display: flex;
   align-items: flex-start;
@@ -326,13 +318,12 @@ function exportTimeCSV() {
 }
 
 @media (max-width: 640px) {
-  .reports-view { padding: 1.25rem; }
   .period-summary { grid-template-columns: 1fr 1fr; }
   .page-header { flex-direction: column; }
 }
 
 @media print {
-  .reports-view { padding: 0; }
+  .view { padding: 0; }
   .charts-grid { grid-template-columns: 1fr 1fr; }
 }
 </style>
