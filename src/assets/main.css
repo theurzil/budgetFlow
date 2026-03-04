@@ -73,14 +73,3 @@
   100% { background-position: -200% 0; }
 }
 
-/* Print styles */
-@media print {
-  .app-nav,
-  .no-print {
-    display: none !important;
-  }
-  body {
-    background: white;
-    color: black;
-  }
-}

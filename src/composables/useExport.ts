@@ -26,9 +26,5 @@ export function useExport() {
     URL.revokeObjectURL(url)
   }
 
-  function triggerPrint() {
-    window.print()
-  }
-
-  return { exportToCSV, triggerPrint }
+  return { exportToCSV }
 }

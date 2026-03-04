@@ -25,7 +25,7 @@ import ChartBar from '@/components/ChartBar.vue'
 
 const budgetStore = useBudgetStore()
 const timeStore = useTimeStore()
-const { exportToCSV, triggerPrint } = useExport()
+const { exportToCSV } = useExport()
 const { formatCurrency } = useCurrency()
 
 type DateRange = 'this-week' | 'this-month' | 'last-month' | 'custom'
@@ -164,15 +164,14 @@ function exportTimeCSV() {
         <h1>Reports</h1>
         <p class="page-subtitle">Analyze your data</p>
       </div>
-      <div class="export-buttons no-print">
+      <div class="export-buttons">
         <BaseButton variant="secondary" @click="exportBudgetCSV">📥 Export Budget CSV</BaseButton>
         <BaseButton variant="secondary" @click="exportTimeCSV">📥 Export Time CSV</BaseButton>
-        <BaseButton variant="ghost" @click="triggerPrint">🖨️ Print PDF</BaseButton>
       </div>
     </div>
 
     <!-- Date range picker -->
-    <BaseCard title="Date Range" class="no-print">
+    <BaseCard title="Date Range">
       <div class="range-controls">
         <BaseSelect v-model="selectedRange" :options="rangeOptions" />
         <template v-if="selectedRange === 'custom'">
@@ -320,10 +319,5 @@ function exportTimeCSV() {
 @media (max-width: 640px) {
   .period-summary { grid-template-columns: 1fr 1fr; }
   .page-header { flex-direction: column; }
-}
-
-@media print {
-  .view { padding: 0; }
-  .charts-grid { grid-template-columns: 1fr 1fr; }
 }
 </style>
