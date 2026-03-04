@@ -41,20 +41,25 @@ const toastStore = useToastStore()
 <style scoped>
 .toast-container {
   position: fixed;
-  top: 1.25rem;
-  right: 1.25rem;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 200;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.625rem;
-  max-width: 360px;
+  width: max-content;
+  max-width: min(420px, 90vw);
+  pointer-events: none;
 }
 
 .toast {
+  pointer-events: all;
   display: flex;
   align-items: center;
   gap: 0.625rem;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 1.25rem;
   border-radius: var(--radius-md);
   border: 1px solid transparent;
   font-size: 0.875rem;
@@ -108,10 +113,10 @@ const toastStore = useToastStore()
 }
 .toast-enter-from {
   opacity: 0;
-  transform: translateX(40px);
+  transform: translateY(12px);
 }
 .toast-leave-to {
   opacity: 0;
-  transform: translateX(40px);
+  transform: translateY(12px);
 }
 </style>
